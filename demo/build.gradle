@@ -1,6 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'acewill'
+            keyPassword '123123'
+            storeFile file('acewill.jks')
+            storePassword '123123'
+        }
+    }
+
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
 
@@ -12,9 +21,29 @@ android {
         versionName "1.0"
     }
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            applicationIdSuffix ".ershou"
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+
+        }
+        release {
+            // 是否混淆
+            minifyEnabled false
+            // 是否支持Zip Align
+            zipAlignEnabled true
+            // 是否不加载无用的资源文件
+            shrinkResources true
+            // 混淆文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // 签名文件
+            signingConfig signingConfigs.config
+
+            buildConfigField "boolean","LOG_DEBUG","false"
         }
     }
 }
