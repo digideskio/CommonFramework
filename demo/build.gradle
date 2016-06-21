@@ -27,7 +27,6 @@ android {
             zipAlignEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.config
-            applicationIdSuffix ".ershou"
             buildConfigField "boolean", "LOG_DEBUG", "true"
 
         }
