@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CommonFramework.iml" filepath="$PROJECT_DIR$/CommonFramework.iml" />
       <module fileurl="file://$PROJECT_DIR$/common_library/common_library.iml" filepath="$PROJECT_DIR$/common_library/common_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common_library/common_library.iml" filepath="$PROJECT_DIR$/common_library/common_library.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo/commonframework.iml" filepath="$PROJECT_DIR$/demo/commonframework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
     </modules>
   </component>
 </project>
