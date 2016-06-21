@@ -5,3 +5,5 @@
 /build
 /captures
 *.apk
+/.idea/libraries
+/.idea/workspace.xml
